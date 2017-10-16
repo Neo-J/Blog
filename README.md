@@ -1,21 +1,24 @@
-# blog
+# Neo's Blog
 
-> A Vue.js project
+*开发大纲*
 
-## Build Setup
+**技术博客部分**
 
-``` bash
-# install dependencies
-npm install
+- [ ] 边栏Menu
+- [ ] 博客列表
+- [ ] 博客
+- [ ] 书单
+- [ ] Resume
 
-# serve with hot reload at localhost:8080
-npm run dev
+**生活博客部分**
 
-# build for production with minification
-npm run build
+- [ ] 边栏Menu
+- [ ] 博客列表
+- [ ] 博客
+- [ ] 书单
+- [ ] 照片墙
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+**其他部分**
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- [ ] 首页
+- [ ] About Me
