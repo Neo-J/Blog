@@ -3,7 +3,9 @@
     <Row type="flex">
       <Col :span="spanLeft" class="layout-menu-left">
         <Menu active-name="1" theme="dark" width="auto">
-          <div class="layout-logo-left"></div>
+          <div class="avatarContainer">
+            <div class="avatar"></div>
+          </div>
           <MenuItem name="1">
             <Icon type="ios-navigate" :size="iconSize"></Icon>
             <span class="layout-text">选项 1</span>
@@ -68,6 +70,45 @@
   }
 </script>
 <style scoped>
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .avatarContainer{
+    position: relative;
+    height: 200px;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px 50px ;
+    background-size: contain;
+    background-image: url(/static/img/avatar_normal.jpg);
+  }
+  .avatar:hover {
+    background-image: url(/static/img/avatar_hover.jpg);
+    -webkit-animation: rotating 3s linear infinite;
+    animation: rotating 3s linear infinite;
+  }
   .layout{
     border: 1px solid #d7dde4;
     background: #f5f7f9;
