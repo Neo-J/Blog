@@ -1,24 +1,14 @@
 <template>
-  <div class="layout" :class="{'layout-hide-text': spanLeft < 5}">
+  <div class="layout" :class="{'layout-hide-text': spanLeft < 7}">
     <Row type="flex">
       <Col :span="spanLeft" class="layout-menu-left">
-        <Menu active-name="1" theme="dark" width="auto">
-          <div class="avatarContainer">
-            <div class="avatar"></div>
+        <div class="cover">
+          <div class="content">
+            <div class="avatarContainer">
+              <div class="avatar"></div>
+            </div>
           </div>
-          <MenuItem name="1">
-            <Icon type="ios-navigate" :size="iconSize"></Icon>
-            <span class="layout-text">选项 1</span>
-          </MenuItem>
-          <MenuItem name="2">
-            <Icon type="ios-keypad" :size="iconSize"></Icon>
-            <span class="layout-text">选项 2</span>
-          </MenuItem>
-          <MenuItem name="3">
-            <Icon type="ios-analytics" :size="iconSize"></Icon>
-            <span class="layout-text">选项 3</span>
-          </MenuItem>
-        </Menu>
+        </div>
       </Col>
       <Col :span="spanRight">
         <div class="layout-header">
@@ -26,18 +16,11 @@
             <Icon type="navicon" size="32"></Icon>
           </Button>
         </div>
-        <div class="layout-breadcrumb">
-          <Breadcrumb>
-            <BreadcrumbItem href="#">首页</BreadcrumbItem>
-            <BreadcrumbItem href="#">应用中心</BreadcrumbItem>
-            <BreadcrumbItem>某应用</BreadcrumbItem>
-          </Breadcrumb>
-        </div>
         <div class="layout-content">
           <div class="layout-content-main">内容区域</div>
         </div>
         <div class="layout-copy">
-          2011-2016 &copy; TalkingData
+          2017-2017 &copy; Neo Jiang
         </div>
       </Col>
     </Row>
@@ -47,23 +30,23 @@
   export default {
     data () {
       return {
-        spanLeft: 5,
-        spanRight: 19
+        spanLeft: 7,
+        spanRight: 17
       }
     },
     computed: {
       iconSize () {
-        return this.spanLeft === 5 ? 14 : 24;
+        return this.spanLeft === 7 ? 14 : 24;
       }
     },
     methods: {
       toggleClick () {
-        if (this.spanLeft === 5) {
+        if (this.spanLeft === 7) {
           this.spanLeft = 2;
           this.spanRight = 22;
         } else {
-          this.spanLeft = 5;
-          this.spanRight = 19;
+          this.spanLeft = 7;
+          this.spanRight = 17;
         }
       }
     }
@@ -117,9 +100,6 @@
     overflow: hidden;
     height: 100%;
   }
-  .layout-breadcrumb{
-    padding: 10px 15px 0;
-  }
   .layout-content{
     min-height: 200px;
     margin: 15px;
@@ -135,9 +115,21 @@
     padding: 10px 0 20px;
     color: #9ea7b4;
   }
-  .layout-menu-left{
-    background: #464c5b;
+  .cover {
     height: 100%;
+    width: 100%;
+    background:linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.75)) repeat scroll 0% 0% transparent;
+  }
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .layout-menu-left{
+    height: 100%;
+    background: url(/static/img/tools.jpg) no-repeat;
+    background-position: top center;
+    background-size: auto 100%;
   }
   .layout-header{
     height: 40px;
