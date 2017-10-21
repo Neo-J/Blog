@@ -134,8 +134,9 @@
     background-size: auto 100%;
   }
   .layout-header{
-    height: 7%;
+    height: 3rem;
     background: #fff;
+    border-bottom: 1px solid #ddd
     /*box-shadow: 0 1px 1px rgba(0,0,0,.1);*/
   }
   .layout-hide-text .layout-text{
