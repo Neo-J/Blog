@@ -11,16 +11,20 @@
         </div>
       </Col>
       <Col :span="spanRight">
-        <div class="layout-header">
-          <Button type="text" @click="toggleClick">
-            <Icon type="navicon" size="32"></Icon>
-          </Button>
-        </div>
-        <div class="layout-content">
-          <div class="layout-content-main">内容区域</div>
-        </div>
-        <div class="layout-copy">
-          2017-2017 &copy; Neo Jiang
+        <div class="layout-right-body">
+          <div class="layout-header">
+            <Button type="text" @click="toggleClick" class="">
+              <Icon type="navicon" size="32"></Icon>
+            </Button>
+          </div>
+          <div class="layout-content">
+            <div class="layout-content-main">
+              <router-view></router-view>
+            </div>
+          </div>
+          <div class="layout-copy">
+            2017 &copy; Neo Jiang
+          </div>
         </div>
       </Col>
     </Row>
@@ -93,8 +97,6 @@
     animation: rotating 3s linear infinite;
   }
   .layout{
-    border: 1px solid #d7dde4;
-    background: #f5f7f9;
     position: relative;
     border-radius: 4px;
     overflow: hidden;
@@ -132,24 +134,21 @@
     background-size: auto 100%;
   }
   .layout-header{
-    height: 40px;
+    height: 7%;
     background: #fff;
-    box-shadow: 0 1px 1px rgba(0,0,0,.1);
-  }
-  .layout-logo-left{
-    width: 90%;
-    height: 30px;
-    background: #5b6270;
-    border-radius: 3px;
-    margin: 15px auto;
-  }
-  .layout-ceiling-main a{
-    color: #9ba7b5;
+    /*box-shadow: 0 1px 1px rgba(0,0,0,.1);*/
   }
   .layout-hide-text .layout-text{
     display: none;
   }
   .ivu-col{
     transition: width .2s ease-in-out;
+  }
+  .layout-right-body {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
   }
 </style>
