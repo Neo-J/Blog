@@ -13,9 +13,13 @@
       <Col :span="spanRight">
         <div class="layout-right-body">
           <div class="layout-header">
-            <Button type="text" @click="toggleClick" class="">
-              <Icon type="navicon" size="32"></Icon>
-            </Button>
+            <nav>
+              <Button type="text" @click="toggleClick" class="">
+                <Icon type="navicon" size="32"></Icon>
+              </Button>
+              <router-link :to="{ name: 'Article'}">ARCHIVE</router-link>
+              <router-link :to="{ name: 'Article'}">ABOUT</router-link>
+            </nav>
           </div>
           <div class="layout-content">
             <div class="layout-content-main">
