@@ -110,7 +110,7 @@
     border-radius: 4px;
   }
   .layout-content-main{
-    padding: 10px;
+    padding-bottom: 5px;
   }
   .layout-copy{
     text-align: center;

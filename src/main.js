@@ -7,6 +7,7 @@ import iView from 'iview';
 import 'iview/dist/styles/iview.css';    // 使用 CSS
 import '../static/css/common.css'
 import _ from 'lodash'
+import 'github-markdown-css'
 
 Vue.use(iView)
 
